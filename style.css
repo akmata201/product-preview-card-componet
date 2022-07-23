@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+  width: 600px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 100%;
+  display: block;
+}
+
+.img-mobile {
+  width: 100%;
+  display: none;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.2rem;
+}
+
+.product-type {
+  color: hsl(228, 12%, 48%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.product-title {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.product-description {
+  font-size: 1.4rem;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.promotion-price {
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+  color: hsl(158, 36%, 37%);
+}
+
+.original-price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.buy-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.add-to-card:link,
+.add-to-card:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: hsl(158, 36%, 37%);
+}
+
+.add-to-card:hover,
+.add-to-card:active {
+  background-color: hsl(158, 39%, 15%);
+}
+
+@media (max-width: 375px) {
+  .product-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+  }
+
+  .product-content {
+    padding: 2.4rem;
+    height: 100%;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    align-items: center;
+  }
+}
